@@ -1,14 +1,14 @@
 const express = require('express') ;
 const colors = require('colors')
 const app = express() ;
+const cors = require('cors') ;
+app.use(cors())
 const PORT = 3000 ;
 const dbConnect = require('./db')
 const errorHandler  = require('./middleware/errorHandler')
 const passport = require('passport')
 const session = require('express-session')
-const cors = require('cors')
-//NOTE parse the data from the req.body
-app.use(cors()) ;
+
 require('dotenv').config()
 require('./config/passportConfig')
 
